@@ -1,6 +1,7 @@
 package llm
 
-import "embed"
+import (
+	"syscall"
+)
 
-//go:embed build/linux/*/*/bin/*
-var libEmbed embed.FS
+var LlamaServerSysProcAttr = &syscall.SysProcAttr{}
